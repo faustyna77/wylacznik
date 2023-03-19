@@ -14,8 +14,8 @@
 #include <Adafruit_Sensor.h>
 
 // Replace with your network credentials
-const char* ssid = "Livebox-49E8";
-const char* password = "20C5487147E40CF90637C9A163";
+const char* ssid = "------";
+const char* password = "---------";
 // Create AsyncWebServer object on port 80
 AsyncWebServer server(80);
 // Set LED GPIO
