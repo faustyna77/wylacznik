@@ -10,8 +10,7 @@
 #include "SPIFFS.h"
 
 #include <Arduino_JSON.h>
-#include <Adafruit_BME280.h>
-#include <Adafruit_Sensor.h>
+
 
 // Replace with your network credentials
 const char* ssid = "------";
@@ -46,19 +45,7 @@ void initWiFi() {
  }
  Serial.println(WiFi.localIP());
 }
-// Replaces placeholder with LED state value
-/*String processor(const String& var){
- if(var == "STATE") {
- if(digitalRead(ledPin)) {
- ledState = "ON";
- }
- else {
- ledState = "OFF";
- }
- return ledState;
- }
- return String();
-}*/
+
 void setup() {
 // Serial port for debugging purposes
  Serial.begin(9600);
@@ -144,36 +131,4 @@ void loop() {
 }
 
 
-/*
-#include <Arduino.h>
-#define WYL 5
-#define W1 23
-#define W2 22
-void setup() {
-  Serial.begin(9600);
-  pinMode(W1,OUTPUT);
-  pinMode(W2,OUTPUT);
-  pinMode(WYL,INPUT_PULLUP);
-  digitalWrite(W1,LOW);
-  digitalWrite(W2,LOW);
 
-
-  // put your setup code here, to run once:
-}
-
-void loop() {
-  
-   if(digitalRead(WYL)==LOW)
-  {
-    digitalWrite(W1,HIGH);
-    digitalWrite(W2,HIGH);
-  }else{
-    digitalWrite(W1,LOW);
-     digitalWrite(W2,LOW);
-
-  }
-
-
-  // put your main code here, to run repeatedly:
-}
-*/
